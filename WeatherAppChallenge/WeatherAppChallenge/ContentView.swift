@@ -12,11 +12,14 @@ struct ContentView: View {
         
         ZStack {
             Rectangle()
+                .fill()
+                .ignoresSafeArea()
                 .foregroundColor(.blue)
                 .cornerRadius(10)
-                .padding()
+                //.padding()
             
             VStack {
+                Spacer()
                 Text("São José dos Campos, SP")
                     .font(.system(size: 24))
                     .fontWeight(.bold)
@@ -120,13 +123,14 @@ struct ContentView: View {
             }
             .padding()
         }
-        .padding()
+        //.padding()
+        .ignoresSafeArea()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.dark)
+            //.preferredColorScheme(.light)
     }
 }
