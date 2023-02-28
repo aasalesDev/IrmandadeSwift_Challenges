@@ -61,10 +61,10 @@ struct User: View {
     var body: some View {
         Image("anderson")
             .resizable()
-            .scaledToFill()
+            .scaledToFit()
             .clipShape(Circle())
-            .frame(width: 125, height: 125, alignment: .bottom)
-            .padding(.bottom, -40)
+            .frame(width: 180, height: 180, alignment: .bottom)
+            .padding(.bottom, -35)
     }
 }
 
