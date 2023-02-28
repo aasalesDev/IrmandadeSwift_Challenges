@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum houses: String {
+enum houses: String, CaseIterable {
     case corvinal = "corvinal"
     case grifinoria = "grifinoria"
     case hogwarts = "hogwarts"
@@ -17,7 +17,6 @@ enum houses: String {
 
 struct ContentView: View {
     @State var logoImage: Image?
-    @State var count = 0
     var body: some View {
         VStack {
             Group {
@@ -31,17 +30,8 @@ struct ContentView: View {
                     .scaledToFit()
             }.offset(y: -50)
             Button {
-                count = Int.random(in: 0...4)
-                if count == 0 {
-                    self.logoImage = Image(houses.corvinal.rawValue)
-                } else if count == 1 {
-                    self.logoImage = Image(houses.grifinoria.rawValue)
-                } else if count == 2 {
-                    self.logoImage = Image(houses.hogwarts.rawValue)
-                } else if count == 3 {
-                    self.logoImage = Image(houses.lufalufa.rawValue)
-                } else if count == 4 {
-                    self.logoImage = Image(houses.sonserina.rawValue)
+                if let image = houses.allCases.randomElement()?.rawValue {
+                    self.logoImage = Image(image)
                 }
             } label: {
                 Text("SORTEAR")
