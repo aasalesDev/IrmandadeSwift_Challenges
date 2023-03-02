@@ -72,7 +72,7 @@ struct States {
         }
     }
     
-    func getAllBrazilianStates() {
+    func printAllBrazilianStates() {
         print("=====All Brazilian States=====")
         for (key, value) in allBrazilianStates {
             print("\(key): \(value)")

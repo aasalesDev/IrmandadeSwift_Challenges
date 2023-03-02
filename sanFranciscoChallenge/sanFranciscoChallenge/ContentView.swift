@@ -22,7 +22,7 @@ struct ContentView: View {
                         }
                 }
             }.onAppear {
-                states.getAllBrazilianStates()
+                states.printAllBrazilianStates()
             }
         }
         .listStyle(.plain)
