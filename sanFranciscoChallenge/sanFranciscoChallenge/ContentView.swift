@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         let states = States()
         List {
-            Section(states.sectionTitle) {
+            Section("\(states.sectionKeyWords.0) \( states.sectionKeyWords.1)") {
                 ForEach(states.allBrazilianStates.sorted(by: <), id: \.key) { key, value in
                     Text(value)
                         .onAppear {

@@ -9,8 +9,8 @@ import Foundation
 
 struct States {
     
+    private (set) var sectionKeyWords = ("BRAZILIAN", "STATES")
     private (set) var randomBrazilianStates: [String : String] = [:]
-    private (set) var sectionTitle = "BRAZILIAN STATES"
     private (set) var appearedMessage = "Appeared: "
     private (set) var disappearedMessage = "Disappeared: "
     
