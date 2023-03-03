@@ -87,9 +87,12 @@ struct ContentView: View {
                                 .font(.system(size: 20))
                         }
                         
-                        Rectangle()
+                        /*Rectangle()
                             .frame(width: 3, height: 120)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.gray)*/
+                        Divider()
+                            .frame(minWidth: 2, maxHeight: 125)
+                            .background(Color(.white))
                         
                         VStack {
                             Text("Thu")
@@ -102,9 +105,12 @@ struct ContentView: View {
                                 .font(.system(size: 20))
                         }
                         
-                        Rectangle()
-                            .frame(width: 3, height: 120)
-                            .foregroundColor(.gray)
+                        //Rectangle()
+                            //.frame(width: 3, height: 120)
+                            //.foregroundColor(.gray)
+                        Divider()
+                            .frame(minWidth: 2, maxHeight: 125)
+                            .background(Color(.white))
                         
                         VStack {
                             Text("Fri")
